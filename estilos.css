@@ -1,0 +1,153 @@
+/* FUENTE (TUS APUNTES) */
+body {
+    font-family: 'Trochi', serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 0;
+}
+
+/* ESTILOS DE LA TABLA MAESTRA */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Bordes colapsados */
+    border-spacing: 5px; /* (Si no hubiera collapse) */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    table-layout: fixed; /* Ayuda a que la tabla no se rompa */
+}
+
+th {
+    background-color: rgb(0, 0, 0); /* Tu color azul */
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    word-wrap: break-word;
+}
+
+td {
+    border: 1px solid black;
+    padding: 10px;
+    vertical-align: top;
+    word-wrap: break-word; /* Si el texto es muy largo, baja */
+}
+
+/* Filas cebra (Tus apuntes) */
+tr:nth-child(even) { background-color: #f2f2f2; }
+tr:nth-child(odd) { background-color: #ffffff; }
+
+/* Separadores de sección (Rojos) */
+.separador {
+    background-color: rgb(113, 79, 123);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+/* Columna de etiquetas clave */
+.dato-clave {
+    font-weight: bold;
+    color: rgb(49, 6, 92);
+    font-family: monospace;
+    font-size: 1.1em;
+}
+
+/* Columna de código */
+.codigo {
+    font-family: monospace;
+    background-color: #18021e;
+    color: rgb(0, 255, 0); /* Verde hacker */
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    white-space: pre-wrap; /* Mantiene formato */
+}
+
+/* --- CLASES ESPECÍFICAS DE TUS APUNTES --- */
+
+/* Margen Loco (Contenido dentro de un contenedor seguro) */
+.margen-loco {
+    border: 1px solid red;
+    background: yellow;
+    /* TUS VALORES EXACTOS */
+    margin: 4px 850px 10px 500px; 
+    width: 100px;
+}
+
+/* Links estados */
+.link-demo:link, .link-demo:visited {
+    background-color: purple;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+.link-demo:hover {
+    background-color: crimson; /* Cambio al pasar mouse */
+    text-decoration: underline;
+}
+.link-demo:active {
+    color: red; /* Click */
+}
+
+/* Display Inline Block */
+.cajita {
+    display: inline-block; /* Elementos en linea */
+    width: 30px;
+    height: 30px;
+    background-color: rgb(0, 25, 99);
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    margin: 2px;
+}
+
+/* LISTAS MENU FLOTANTE */
+ul.menu-flotante {
+    list-style-type: square;
+    overflow: hidden;
+    background-color: #333;
+    padding: 10px;
+    margin: 0;
+}
+ul.menu-flotante li {
+    float: left; /* Flotar izquierda */
+    color: white;
+    margin-right: 15px;
+}
+
+/* LISTAS CONTADORES */
+ol.lista-contador {
+    counter-reset: contador;
+    list-style: none;
+}
+ol.lista-contador li {
+    counter-increment: contador;
+    margin: 5px 0;
+}
+ol.lista-contador li::before {
+    content: "Curso " counter(contador) ') ';
+    color: crimson;
+    font-weight: bold;
+}
+ol.lista-contador li::after {
+    content: ".";
+}
+
+/* TABLA DEMO INTERNA (Para la columna resultado) */
+table.tabla-demo {
+    width: 100%;
+    border: 1px solid black;
+    font-family: sans-serif;
+}
+table.tabla-demo caption {
+    line-height: 30px; /* Reducido para que quepa, pero concepto igual */
+    font-weight: bold;
+    color: crimson;
+}
+table.tabla-demo th, table.tabla-demo td {
+    padding: 2px 5px;
+    text-align: center;
+    font-size: 0.8em;
+}

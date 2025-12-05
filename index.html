@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Enciclopedia HTML de Jhosue</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Trochi" rel="stylesheet">
+    
+    <link rel="stylesheet" href="estilos.css">
+    <meta name="description" content="Enciclopedia HTML y CSS de Jhosue. Guía práctica con ejemplos de etiquetas, estilos, tablas y formularios para aprender desarrollo web paso a paso.">
+</head>
+<body>
+
+    <h1 style="text-align: center; color: rgb(0, 0, 0);">GUÍA MAESTRA HTML & CSS</h1>
+    <p style="text-align: center;">Explicación detallada de cada uno de tus apuntes, línea por línea.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th width="10%">Etiqueta / Concepto</th>
+                <th width="25%">Explicación (Nivel 0)</th>
+                <th width="20%">Atributos y Detalles Técnicos</th>
+                <th width="25%">Cómo se escribe (Código)</th>
+                <th width="20%">Resultado en Vivo</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr><td colspan="5" class="separador">1. ESTRUCTURA BÁSICA Y CABECERA</td></tr>
+
+            <tr>
+                <td class="dato-clave">Definiciones</td>
+                <td>Conceptos teóricos básicos.</td>
+                <td>HTML = HyperText Markup Language<br>URL = Uniform Resource Locator</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;!DOCTYPE html&gt;</td>
+                <td>Es el DNI del documento. Le dice al navegador "Soy un HTML moderno".</td>
+                <td>Va en la primera línea.</td>
+                <td class="codigo">&lt;!DOCTYPE html&gt;</td>
+                <td><i>(Invisible)</i></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;html&gt;</td>
+                <td>La caja madre que envuelve TODO.</td>
+                <td><b>lang="en"</b>: Define el idioma (inglés).</td>
+                <td class="codigo">&lt;html lang="en"&gt;...&lt;/html&gt;</td>
+                <td><i>(Contiene todo)</i></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;head&gt;</td>
+                <td><b>La Cabeza:</b> Es el cerebro, da información técnica pero no se ve el contenido.</td>
+                <td>Contiene meta, title, link.</td>
+                <td class="codigo">&lt;head&gt;...&lt;/head&gt;</td>
+                <td><i>(Invisible)</i></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;meta&gt;</td>
+                <td>Configuración técnica.</td>
+                <td><b>charset="UTF-8"</b>: ¡Vital! Permite usar tildes y caracteres especiales. No tiene cierre.</td>
+                <td class="codigo">&lt;meta charset="UTF-8"/&gt;</td>
+                <td>á, ñ, ü (Funcionan gracias a esto)</td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;title&gt;</td>
+                <td>El título de la PESTAÑA del navegador (encabezado).</td>
+                <td>No se ve en la página blanca, sino arriba en el navegador.</td>
+                <td class="codigo">&lt;title&gt;Mi Pagina&lt;/title&gt;</td>
+                <td>(Mira la pestaña arriba)</td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;body&gt;</td>
+                <td><b>El Cuerpo:</b> Aquí va todo lo que ve el usuario.</td>
+                <td><b>style="background-color:..."</b>: Cambia el fondo.</td>
+                <td class="codigo">&lt;body&gt;...&lt;/body&gt;</td>
+                <td>(Todo lo blanco que ves)</td>
+            </tr>
+
+            <tr><td colspan="5" class="separador">2. TITULOS Y PARRAFOS</td></tr>
+
+            <tr>
+                <td class="dato-clave">&lt;h1&gt; a &lt;h6&gt;</td>
+                <td>Son los titulares. H1 es gigante, H6 es diminuto.</td>
+                <td>Se usan para dar jerarquía.</td>
+                <td class="codigo">
+&lt;h1&gt;Titulo 1&lt;/h1&gt;<br>
+&lt;h6&gt;Titulo 6&lt;/h6&gt;
+                </td>
+                <td>
+                    <h1>Titulo 1</h1>
+                    <h6>Titulo 6</h6>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;p&gt;</td>
+                <td>Párrafos de texto normal.</td>
+                <td>Es el bloque estándar de texto.</td>
+                <td class="codigo">&lt;p&gt;Hola soy texto&lt;/p&gt;</td>
+                <td><p style="margin:0;">Hola soy texto</p></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;br&gt;</td>
+                <td>Salto de línea (Enter).</td>
+                <td>No tiene cierre. Corta el texto y baja.</td>
+                <td class="codigo">Hola&lt;br&gt;Adios</td>
+                <td>Hola<br>Adios</td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;hr&gt;</td>
+                <td>Línea horizontal separadora.</td>
+                <td>Crea una raya visual para separar temas.</td>
+                <td class="codigo">&lt;hr&gt;</td>
+                <td><hr></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;pre&gt;</td>
+                <td>Texto pre-formateado.</td>
+                <td>Respeta tus espacios y saltos tal cual los escribes. Sin necesidad de BR.</td>
+                <td class="codigo">
+&lt;pre&gt;
+   Esto respeta
+      espacios.
+&lt;/pre&gt;
+                </td>
+                <td>
+<pre style="margin:0; font-family:monospace;">
+   Esto respeta
+      espacios.
+</pre>
+                </td>
+            </tr>
+
+            <tr><td colspan="5" class="separador">3. MAQUILLAJE DE TEXTO (FORMATOS)</td></tr>
+
+            <tr>
+                <td class="dato-clave">&lt;b&gt; / &lt;strong&gt;</td>
+                <td>Poner en <b>Negrita</b>.</td>
+                <td><b>strong:</b> Da importancia semántica.<br><b>b:</b> Solo visual.</td>
+                <td class="codigo">&lt;b&gt;Negrita&lt;/b&gt;</td>
+                <td><b>Negrita</b></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;i&gt; / &lt;em&gt;</td>
+                <td>Poner en <i>Cursiva</i>.</td>
+                <td><b>i:</b> Recursiva/Itálica.<br><b>em:</b> Enfatizar.</td>
+                <td class="codigo">&lt;i&gt;Cursiva&lt;/i&gt;</td>
+                <td><i>Cursiva</i></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;small&gt;</td>
+                <td>Texto pequeño.</td>
+                <td>Reduce el tamaño de la letra.</td>
+                <td class="codigo">&lt;small&gt;Chiquito&lt;/small&gt;</td>
+                <td><small>Chiquito</small></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;mark&gt;</td>
+                <td>Resaltador.</td>
+                <td>Pinta el fondo de amarillo brillante.</td>
+                <td class="codigo">&lt;mark&gt;Ojo aquí&lt;/mark&gt;</td>
+                <td><mark>Ojo aquí</mark></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;del&gt; / &lt;ins&gt;</td>
+                <td>Corregir textos.</td>
+                <td><b>del:</b> Tacha la palabra.<br><b>ins:</b> Subraya (insertado).</td>
+                <td class="codigo">&lt;del&gt;Mal&lt;/del&gt; &lt;ins&gt;Bien&lt;/ins&gt;</td>
+                <td><del>Mal</del> <ins>Bien</ins></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;sub&gt; / &lt;sup&gt;</td>
+                <td>Letras voladoras.</td>
+                <td><b>sub:</b> Baja (H2O).<br><b>sup:</b> Eleva (Potencia).</td>
+                <td class="codigo">H&lt;sub&gt;2&lt;/sub&gt;O</td>
+                <td>H<sub>2</sub>O</td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Caracteres Especiales</td>
+                <td>Símbolos reservados.</td>
+                <td><b>&amp;excl;</b> o <b>&amp;#33;</b> es el signo (!).</td>
+                <td class="codigo">&amp;excl; &amp;#33;</td>
+                <td>&excl; &#33;</td>
+            </tr>
+
+            <tr><td colspan="5" class="separador">4. ENLACES E IMÁGENES</td></tr>
+
+            <tr>
+                <td class="dato-clave">&lt;a&gt; (Link)</td>
+                <td>Transportador a otra web.</td>
+                <td>
+                    <b>href:</b> La dirección.<br>
+                    <b>target="_blank":</b> Abre en otra pestaña.<br>
+                    <b>Rutas:</b> Relativas (../) o Absolutas (youtube.com).
+                </td>
+                <td class="codigo">&lt;a href="https://google.com" target="_blank"&gt;Ir&lt;/a&gt;</td>
+                <td><a href="https://google.com" target="_blank">Ir</a></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;img&gt;</td>
+                <td>Insertar foto.</td>
+                <td>
+                    <b>src:</b> Ruta imagen.<br>
+                    <b>alt:</b> Texto si falla.<br>
+                    <b>title:</b> Texto al pasar mouse.<br>
+                    <b>width/height:</b> Tamaño.
+                </td>
+                <td class="codigo">&lt;img src="..." width="50"&gt;</td>
+                <td><img src="https://via.placeholder.com/50" width="50" title="Hola soy el title"></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Link con Imagen</td>
+                <td>Hacer que una foto sea un botón.</td>
+                <td>Se pone la img DENTRO de la a.</td>
+                <td class="codigo">&lt;a&gt;&lt;img src="..."&gt;&lt;/a&gt;</td>
+                <td>
+                    <a href="#"><img src="https://via.placeholder.com/30/0000FF/808080" alt="Click"></a>
+                </td>
+            </tr>
+
+            <tr><td colspan="5" class="separador">5. ESTILOS CSS (COLORES Y CAJAS)</td></tr>
+
+            <tr>
+                <td class="dato-clave">Colores</td>
+                <td>Formas de pintar.</td>
+                <td>
+                    <b>Nombre:</b> crimson.<br>
+                    <b>RGB:</b> rgb(0,25,99).<br>
+                    <b>RGBA:</b> con transparencia (0.5).
+                </td>
+                <td class="codigo">style="color: crimson;"</td>
+                <td>
+                    <span style="color:crimson; font-weight:bold;">Crimson</span><br>
+                    <span style="color:rgb(0,25,99); font-weight:bold;">RGB(0,25,99)</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Modelo de Caja</td>
+                <td>Padding, Border, Margin.</td>
+                <td>
+                    <b>Padding:</b> Relleno interno.<br>
+                    <b>Margin:</b> Espacio externo.<br>
+                    <b>Border:</b> El borde.
+                </td>
+                <td class="codigo">border: 10px solid rgba(220,20,60,.5);</td>
+                <td>
+                    <div style="border: 5px solid rgba(220,20,60,.5); padding: 5px;">Caja</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Margen Loco (Tu apunte)</td>
+                <td>Un margen con valores extremos.</td>
+                <td>
+                    <code>margin: 4px 850px 10px 500px;</code><br>
+                    (Arriba, Derecha, Abajo, Izquierda).
+                </td>
+                <td class="codigo">class="margen-loco"</td>
+                <td>
+                    <div style="width: 200px; overflow-x: auto; border: 1px dashed black;">
+                        <div class="margen-loco">Soy el elemento con 850px de margen</div>
+                    </div>
+                    <small>Use scroll para ver el margen gigante</small>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Estados del Link</td>
+                <td>Cómo cambia el link al interactuar.</td>
+                <td>
+                    <b>a:link:</b> Normal.<br>
+                    <b>a:visited:</b> Ya visitado (Purple).<br>
+                    <b>a:hover:</b> Mouse encima.<br>
+                    <b>a:active:</b> Click presionado.
+                </td>
+                <td class="codigo">
+a:hover { color: crimson; }
+                </td>
+                <td><a href="#" class="link-demo">Pasa el mouse aquí</a></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Display Inline-Block</td>
+                <td>Para poner cajas una al lado de la otra.</td>
+                <td>Evita que se pongan una encima de otra.</td>
+                <td class="codigo">display: inline-block;</td>
+                <td>
+                    <div class="cajita">1</div>
+                    <div class="cajita">2</div>
+                </td>
+            </tr>
+
+            <tr><td colspan="5" class="separador">6. LISTAS AVANZADAS</td></tr>
+
+            <tr>
+                <td class="dato-clave">&lt;ul&gt; Menú</td>
+                <td>Lista Desordenada (Viñetas).</td>
+                <td>
+                    <b>style="list-style-type: square"</b> (Cuadrados).<br>
+                    <b>float: left</b> (Items a la izquierda).<br>
+                    <b>overflow: hidden</b> (Ocultar sobrantes).
+                </td>
+                <td class="codigo">
+&lt;ul class="menu-flotante"&gt;<br>
+&nbsp;&nbsp;&lt;li&gt;A&lt;/li&gt;&lt;li&gt;B&lt;/li&gt;<br>
+&lt;/ul&gt;
+                </td>
+                <td>
+                    <ul class="menu-flotante">
+                        <li>Inicio</li>
+                        <li>Fin</li>
+                    </ul>
+                    <div style="clear:both;"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;ol&gt; Contadores</td>
+                <td>Lista Ordenada (Números).</td>
+                <td>
+                    <b>counter-reset / increment:</b> Tu propio contador.<br>
+                    <b>::before content:</b> Poner texto antes del número.<br>
+                    <b>type:</b> Cambiar num o letra.
+                </td>
+                <td class="codigo">
+content: "Curso " counter(contador);
+                </td>
+                <td>
+                    <ol class="lista-contador">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ol>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;dl&gt;</td>
+                <td>Lista de Descripción.</td>
+                <td>dt (Término) y dd (Descripción).</td>
+                <td class="codigo">&lt;dt&gt;A&lt;/dt&gt;&lt;dd&gt;Letra&lt;/dd&gt;</td>
+                <td>
+                    <dl>
+                        <dt>HTML</dt><dd>Lenguaje</dd>
+                    </dl>
+                </td>
+            </tr>
+
+            <tr><td colspan="5" class="separador">7. TABLAS</td></tr>
+
+            <tr>
+                <td class="dato-clave">Estructura Tabla</td>
+                <td>La rejilla de datos.</td>
+                <td>
+                    <b>table:</b> Contenedor.<br>
+                    <b>tr:</b> Fila.<br>
+                    <b>th:</b> Cabecera.<br>
+                    <b>td:</b> Dato.<br>
+                    <b>caption:</b> Título (line-height:70px).
+                </td>
+                <td class="codigo">Ver ejemplo visual</td>
+                <td rowspan="2">
+                    <table class="tabla-demo">
+                        <caption>Titulo (caption)</caption>
+                        <tr>
+                            <th>Col 1</th>
+                            <th>Col 2</th>
+                        </tr>
+                        <tr>
+                            <td>Dato</td>
+                            <td>Dato</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Rowspan 2</td>
+                            <td>Dato</td>
+                        </tr>
+                        <tr>
+                            <td>Dato</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align:center;">Colspan 2</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Estilos Tabla</td>
+                <td>Bordes y Colores.</td>
+                <td>
+                    <b>border-collapse:</b> Unir bordes.<br>
+                    <b>nth-child(even/odd):</b> Filas pares/impares.<br>
+                    <b>width: 100%:</b> Ancho total.
+                </td>
+                <td class="codigo">tr:nth-child(even) { color... }</td>
+            </tr>
+
+            <tr><td colspan="5" class="separador">8. BLOQUES Y VENTANAS</td></tr>
+
+            <tr>
+                <td class="dato-clave">&lt;div&gt; vs &lt;span&gt;</td>
+                <td>
+                    <b>Div:</b> Bloque (caja grande).<br>
+                    <b>Span:</b> Inline (dentro de línea).
+                </td>
+                <td>Se usan con <b>class</b> (grupo) o <b>id</b> (único).</td>
+                <td class="codigo">&lt;div class="clase"&gt;</td>
+                <td>
+                    <div>Div bloque</div>
+                    <span>Span linea</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">&lt;iframe&gt;</td>
+                <td>Mostrar otra página dentro.</td>
+                <td>
+                    <b>name="x":</b> Nombre para identificarlo.<br>
+                    <b>target="x":</b> Enlace que carga ahí.
+                </td>
+                <td class="codigo">target="nombre_iframe"</td>
+                <td>
+                    <iframe name="ventanita" style="width:100%; height:50px;"></iframe>
+                    <a href="https://www.wikipedia.org" target="ventanita">Cargar Wiki</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Bookmarks</td>
+                <td>Enlaces internos.</td>
+                <td>&lt;a href="#id"&gt; viaja al elemento con id="id".</td>
+                <td class="codigo">href="#nombreID"</td>
+                <td>(Los menús de arriba usan esto)</td>
+            </tr>
+
+            <tr><td colspan="5" class="separador">9. FORMULARIOS (DATOS)</td></tr>
+
+            <tr>
+                <td class="dato-clave">&lt;form&gt;</td>
+                <td>Carpeta del formulario.</td>
+                <td>
+                    <b>action:</b> URL destino.<br>
+                    <b>method:</b> POST o GET.<br>
+                    <b>autocomplete="off":</b> Sin sugerencias.<br>
+                    <b>novalidate:</b> Enviar sin chequear errores.
+                </td>
+                <td class="codigo">&lt;form method="post"&gt;</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Agrupación</td>
+                <td>Marcos para ordenar.</td>
+                <td>
+                    <b>fieldset:</b> El marco.<br>
+                    <b>legend:</b> El título del marco.
+                </td>
+                <td class="codigo">&lt;fieldset&gt;&lt;legend&gt;...</td>
+                <td>
+                    <fieldset><legend>Titulo</legend>...</fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Inputs Básicos</td>
+                <td>Cajas de texto.</td>
+                <td>
+                    <b>type="text"</b><br>
+                    <b>type="email"</b> (@)<br>
+                    <b>placeholder:</b> Texto fantasma.<br>
+                    <b>required:</b> Obligatorio.
+                </td>
+                <td class="codigo">&lt;input type="text" placeholder="..."&gt;</td>
+                <td><input type="text" placeholder="Escribe..."></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Input Number</td>
+                <td>Solo números.</td>
+                <td><b>step="any":</b> Permite decimales.</td>
+                <td class="codigo">&lt;input type="number" step="any"&gt;</td>
+                <td><input type="number" step="any" style="width:60px;"></td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Radio</td>
+                <td>Selección única (Bolitas).</td>
+                <td><b>name="mismo":</b> Deben tener igual nombre para ser grupo.</td>
+                <td class="codigo">name="grupo1"</td>
+                <td>
+                    <input type="radio" name="g1"> A
+                    <input type="radio" name="g1"> B
+                </td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Checkbox</td>
+                <td>Selección múltiple (Cuadrados).</td>
+                <td>Tambien usar mismo name para agrupar datos.</td>
+                <td class="codigo">type="checkbox"</td>
+                <td>
+                    <input type="checkbox"> X
+                    <input type="checkbox"> Y
+                </td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Select & Textarea</td>
+                <td>Lista y Caja grande.</td>
+                <td>
+                    <b>multiple="true":</b> Elegir varios.<br>
+                    <b>rows/cols:</b> Tamaño del textarea.
+                </td>
+                <td class="codigo">&lt;textarea rows="2"&gt;</td>
+                <td>
+                    <select><option>1</option></select><br>
+                    <textarea rows="1" cols="10"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="dato-clave">Botones Submit</td>
+                <td>Enviar.</td>
+                <td><b>formnovalidate:</b> Botón que salta la validación.</td>
+                <td class="codigo">formnovalidate="formnovalidate"</td>
+                <td>
+                    <input type="submit" value="Enviar">
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+</html>
