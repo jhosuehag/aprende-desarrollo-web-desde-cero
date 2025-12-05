@@ -26,8 +26,7 @@ Esta guía cubre los fundamentos esenciales para construir sitios web modernos:
 * **📝 Formularios Interactivos:** Inputs, botones, validaciones y checkboxes.
 
 ## 📸 Capturas de Pantalla
-*(Aquí puedes subir una imagen de tu página para que se vea genial)*
-![Vista previa del sitio](https://via.placeholder.com/800x400?text=Captura+de+tu+Pagina+Web)
+![Vista previa del sitio](https://github.com/jhosuehag/aprende-desarrollo-web-desde-cero/blob/main/captura.PNG?raw=true)
 
 ## 🛠️ Tecnologías Usadas
 * **HTML5:** Estructura semántica moderna.
